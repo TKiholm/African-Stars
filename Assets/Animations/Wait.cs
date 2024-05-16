@@ -42,74 +42,109 @@ public class Wait : MonoBehaviour
     {
         audioSource.clip = Para1;
         audioSource.Play(0);
-        yield return new WaitForSeconds(27);
+        yield return new WaitForSeconds(24);
         audioSource.clip = Para2;
         audioSource.Play(0);
+        yield return new WaitForSeconds(4);
         anim.SetTrigger("ManPraying");
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(15);
         anim.SetTrigger("ManPrayingR");
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         audioSource.clip = Para3;
         audioSource.Play(0);
         anim.SetTrigger("ManOnHill");
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(7);
         anim.SetTrigger("ChildOnHill");
-        yield return new WaitForSeconds(12);
-        anim.SetTrigger("ManOnHillR");
+        yield return new WaitForSeconds(6);
         anim.SetTrigger("ChildOnHillR");
 
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para4;
+        audioSource.Play(0);
+        yield return new WaitForSeconds(16);
+        anim.SetTrigger("ManOnHillR");
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para5;
+        audioSource.Play(0);
         yield return new WaitForSeconds(5);
         anim.SetTrigger("CaveFire");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(20);
+        // indsæt collision trigger
+
+
         anim.SetTrigger("CaveFireR");
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para6;
+        audioSource.Play(0);
+        yield return new WaitForSeconds(6);
+        anim.SetTrigger("ChildBegging");
+        anim.SetTrigger("ManStanding");
+        yield return new WaitForSeconds(14);
+        anim.SetTrigger("ChildBeggingR");
+        anim.SetTrigger("ManStandingR");
 
-        yield return new WaitForSeconds(5);
-        anim.SetTrigger("Childbegging");
-        //manstanding
-        yield return new WaitForSeconds(5);
-        anim.SetTrigger("ChildbeggingR");
-        //manstanding
-
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         anim.SetTrigger("ChildTelling");
-        //Elder
-        yield return new WaitForSeconds(5);
+        anim.SetTrigger("Elder");
+        yield return new WaitForSeconds(13);
         anim.SetTrigger("ChildTellingR");
-        //Elder
+        anim.SetTrigger("ElderR");
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para7;
+        audioSource.Play(0);
+        yield return new WaitForSeconds(6);
+        anim.SetTrigger("Cave");
+        anim.SetTrigger("Man1Running");
+        anim.SetTrigger("Man2Running");
+
+
+        yield return new WaitForSeconds(4);
         anim.SetTrigger("TheManRunning");
-        //Cave, Man1Running, Man2Running
-        yield return new WaitForSeconds(5);
+        //Cave, Man1Running, Man2Running måske 3-4 sekunder før manden
+        yield return new WaitForSeconds(14);
         anim.SetTrigger("TheManRunningR");
+        anim.SetTrigger("CaveR");
+        anim.SetTrigger("Man1RunningR");
+        anim.SetTrigger("Man2RunningR");
         //Cave, Man1Running, Man2Running
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para8;
+        audioSource.Play(0);
+        yield return new WaitForSeconds(8);
         anim.SetTrigger("ManWithPouch");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(12);
         anim.SetTrigger("ManInPouch");
         yield return new WaitForSeconds(5);
         anim.SetTrigger("ManInPouchR");
-        yield return new WaitForSeconds(5);
+        //Set Second Trigger
+
+
+        yield return new WaitForSeconds(3);
         anim.SetTrigger("ManWithPouchR");
-
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para9;
+        audioSource.Play(0);
         anim.SetTrigger("ManFire");
-        //ChildFire
-        //Fire without reversing first
-        yield return new WaitForSeconds(5);
+        anim.SetTrigger("ChildFire");
+        yield return new WaitForSeconds(16);
+        anim.SetTrigger("Fire");
+        yield return new WaitForSeconds(11);
         anim.SetTrigger("ManFireR");
-        //ChildFire
-        //Fire later but without reversing first
+        anim.SetTrigger("ChildFireR");
+        anim.SetTrigger("FireR");
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        audioSource.clip = Para10;
+        audioSource.Play(0);
+        yield return new WaitForSeconds(6);
         anim.SetTrigger("ManEnd");
-        //ChildEnd
-        yield return new WaitForSeconds(5);
+        anim.SetTrigger("ChildEnd");
+        yield return new WaitForSeconds(18);
         anim.SetTrigger("ManEndR");
-        //childEnd
+        anim.SetTrigger("ChildEndR");
 
     }
 }
