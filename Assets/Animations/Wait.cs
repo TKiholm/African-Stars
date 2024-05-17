@@ -24,6 +24,8 @@ public class Wait : MonoBehaviour
     public AudioClip Para10;
 
     public AudioSource audioSource; 
+    public GameObject collisionObject;
+
 
     void Start()
     {
@@ -37,6 +39,17 @@ public class Wait : MonoBehaviour
         
        
     }
+    
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Meat")
+        {
+            StartCoroutine(Middle());
+        }
+
+
+    }
+
 
     IEnumerator Beginning()
     {
@@ -71,6 +84,17 @@ public class Wait : MonoBehaviour
         anim.SetTrigger("CaveFire");
         yield return new WaitForSeconds(20);
         // indsæt collision trigger
+
+
+        
+
+
+     
+
+    }
+
+
+    IEnumerator Middle(){
 
 
         anim.SetTrigger("CaveFireR");
@@ -120,7 +144,11 @@ public class Wait : MonoBehaviour
         yield return new WaitForSeconds(5);
         anim.SetTrigger("ManInPouchR");
         //Set Second Trigger
-
+        
+        
+    }
+    
+    IEnumerator End(){
 
         yield return new WaitForSeconds(3);
         anim.SetTrigger("ManWithPouchR");
@@ -145,23 +173,7 @@ public class Wait : MonoBehaviour
         yield return new WaitForSeconds(18);
         anim.SetTrigger("ManEndR");
         anim.SetTrigger("ChildEndR");
+        
 
     }
 }
-   /* 
-    IEnumerator ExampleCoroutine1(){
-        
-        
-        StartCoroutine(ExampleCoroutine2());
-    }
-    
-    IEnumerator ExampleCoroutine2(){
-        
-        StartCoroutine(ExampleCoroutine3());
-    }
-      IEnumerator ExampleCoroutine3(){
-        
-        StartCoroutine(ExampleCoroutine());
-    }
-}
-*/
