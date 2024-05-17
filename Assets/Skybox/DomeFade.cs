@@ -32,6 +32,8 @@ public class DomeFade : MonoBehaviour
         faded = true;
     }
 
+
+
     private void Start()
     {
         faded = false;
@@ -40,6 +42,7 @@ public class DomeFade : MonoBehaviour
     {
         if (!faded)
         {
+
             StartCoroutine(FadeOutObject(dome));
         }
         
